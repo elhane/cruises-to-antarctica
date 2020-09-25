@@ -1,0 +1,79 @@
+.page-main {
+  margin-top: -109px;
+}
+
+.page-main__promo {
+  min-height: 650px;
+
+  color: $text-light;
+  background-image: url("../img/page-main-bg-desktop@1x.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/page-main-bg-desktop@2x.jpg");
+    // background-size: 1366px auto;
+  }
+}
+
+.page-main__promo h1 {
+  padding: 270px 0 0 97px;
+  margin: 0;
+
+  @include text(54px, 66px);
+  font-weight: 700;
+}
+
+.page-main__promo p {
+  padding: 12px 0 0 97px;
+  margin: 0;
+
+  @include text(20px, 24px);
+  font-weight: 400;
+}
+
+@media (max-width: $tablet-width) {
+  .page-main {
+    margin-top: -83px;
+  }
+
+  .page-main__promo {
+    min-height: 638px;
+    background-image: url("../img/page-main-bg-tablet@1x.jpg");
+  }
+
+  .page-main__promo h1 {
+    padding-left: 0;
+
+    @include text(50px, 61px);
+  }
+
+  .page-main__promo p {
+    padding-left: 0;
+
+    @include text(18px, 22px);
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .page-main {
+    margin-top: -61px;
+  }
+
+  .page-main__promo {
+    min-height: 500px;
+  }
+
+  .page-main__promo h1 {
+    padding-top: 177px;
+
+    @include text(36px, 45px);
+  }
+
+  .page-main__promo p {
+    padding-top: 10px;
+
+    @include text(16px, 22px);
+  }
+}
+

@@ -4,10 +4,77 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Стартовый шаблон</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Круизы в Антарктику </title>
+  <link rel="stylesheet" href="css/style.min.css">
+
+  <!--Pixel Glass -->
+  <!-- <style>
+    html {
+      background-repeat: no-repeat;
+      background-position: 50% 0;
+      /* Mobile layout by default */
+      background-image: url("img/previews/1366.png");
+    }
+    /* Tablet */
+    @media (max-width: 1023px) {
+      html {
+        /* Tablet layout */
+        background-image: url("img/previews/768.png");
+      }
+    }
+    /* mobile */
+    @media (max-width: 767px) {
+      html {
+        /* Desktop layout */
+        background-image: url("img/previews/320.png");
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="https://yoksel.github.io/pixel-glass-js/styles.css">
+  <script src="https://yoksel.github.io/pixel-glass-js/script.js"></script> -->
+ <!-- Pixel Glass -->
+
 </head>
 <body>
-  <h1>Добро пожаловать в Лигу А.</h1>
+  <div style="display: none;">
+    <include src="build/img/sprite.svg"></include>
+  </div>
+  <header class="header container">
+    <a class="header__logo-link">
+      <svg class="header__logo-image" width="70" height="38">
+        <use xlink:href="#icon-logo" x="0" y="0"></use>
+      </svg>
+    </a>
+    <nav class="header__nav main-nav main-nav--nojs main-nav--closed">
+      <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
+      <ul class="main-nav__list">
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#benefits">Преимущества</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#destinations">Направления</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#cruises">Ближайшие круизы</a>
+        </li>
+        <li class="main-nav__item">
+          <a class="main-nav__link" href="#contacts">Контакты</a>
+        </li>
+      </ul>
+
+    </nav>
+
+  </header>
+
+<main class="page-main">
+
+  <div class="page-main__promo">
+    <div class="container">
+      <h1>Круизы в&#160;Антарктику</h1>
+      <p>Волшебный мир айсбергов&#160;и&#160;пингвинов</p>
+    </div>
+  </div>
+
+</main>
 </body>
 </html>
