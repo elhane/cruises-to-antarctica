@@ -2,15 +2,28 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 109px;
 
+  padding-top: 36px;
+  padding-bottom: 36px;
   color: $text-light;
 }
 
 .header__logo-link {
+  position: relative;
   display: flex;
   align-items: center;
   transition: 0.3s;
+
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+  }
 
   &:hover {
     opacity: 0.6;
@@ -36,7 +49,8 @@
 
 @media (max-width: $tablet-width) {
   .header {
-    min-height: 83px;
+    padding-top: 21px;
+    padding-bottom: 21px;
   }
 
   .header__logo-svg {

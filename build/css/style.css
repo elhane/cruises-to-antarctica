@@ -396,10 +396,12 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 109px;
+  padding-top: 36px;
+  padding-bottom: 36px;
   color: #f9fbfd; }
 
 .header__logo-link {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -408,6 +410,15 @@ img {
           align-items: center;
   -webkit-transition: 0.3s;
   transition: 0.3s; }
+  .header__logo-link::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; }
   .header__logo-link:hover {
     opacity: 0.6; }
   .header__logo-link:focus {
@@ -424,7 +435,8 @@ img {
 
 @media (max-width: 1023px) {
   .header {
-    min-height: 83px; }
+    padding-top: 21px;
+    padding-bottom: 21px; }
   .header__logo-svg {
     fill: #f9fbfd;
     width: 38px;
@@ -653,17 +665,28 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  min-height: 138px; }
+  padding-top: 49px;
+  padding-bottom: 49px; }
 
 .footer__logo-link:hover .footer__logo-svg {
   fill: #76bff1; }
 
-.footer__logo-link:focus {
-  outline: dashed 2px rgba(255, 255, 255, 0.2);
-  outline-offset: 0; }
-
-.footer__logo-link:active {
-  opacity: 0.3; }
+.footer__logo-link {
+  position: relative; }
+  .footer__logo-link::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; }
+  .footer__logo-link:focus {
+    outline: dashed 2px rgba(255, 255, 255, 0.2);
+    outline-offset: 0; }
+  .footer__logo-link:active {
+    opacity: 0.3; }
 
 .footer__logo-svg {
   fill: #f9fbfd; }
@@ -710,16 +733,24 @@ img {
 .footer__social-link:hover .footer__social-svg {
   fill: #76bff1; }
 
-.footer__social-link:focus {
-  outline: dashed 2px rgba(255, 255, 255, 0.2);
-  outline-offset: 3px; }
-
-.footer__social-link:active {
-  opacity: 0.3; }
+.footer__social-link {
+  position: relative; }
+  .footer__social-link::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 100; }
+  .footer__social-link:focus {
+    outline: dashed 2px rgba(255, 255, 255, 0.2);
+    outline-offset: 3px; }
+  .footer__social-link:active {
+    opacity: 0.3; }
 
 @media (max-width: 1023px) {
-  .footer__inner {
-    min-height: 120px; }
   .footer__logo-svg {
     width: 38px;
     height: 20px; }
