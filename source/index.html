@@ -6,52 +6,24 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Круизы в Антарктику </title>
   <link rel="stylesheet" href="css/style.min.css">
-
-  <!--Pixel Glass -->
-  <!-- <style>
-    html {
-      background-repeat: no-repeat;
-      background-position: 50% 0;
-      /* Mobile layout by default */
-      background-image: url("img/previews/1366.png");
-    }
-    /* Tablet */
-    @media (max-width: 1023px) {
-      html {
-        /* Tablet layout */
-        background-image: url("img/previews/768.png");
-      }
-    }
-    /* mobile */
-    @media (max-width: 767px) {
-      html {
-        /* Desktop layout */
-        background-image: url("img/previews/320.png");
-      }
-    }
-  </style>
-  <link rel="stylesheet" href="https://yoksel.github.io/pixel-glass-js/styles.css">
-  <script src="https://yoksel.github.io/pixel-glass-js/script.js"></script> -->
- <!-- Pixel Glass -->
-
 </head>
 <body>
   <div style="display: none;">
     <include src="build/img/sprite.svg"></include>
   </div>
-  <header class="header container">
+  <header class="header container header--nojs">
     <a class="header__logo-link">
-      <svg class="header__logo-image" width="70" height="38">
+      <svg class="header__logo-svg" width="70" height="38">
         <use xlink:href="#icon-logo" x="0" y="0"></use>
       </svg>
     </a>
-    <nav class="header__nav main-nav main-nav--nojs main-nav--closed">
-      <button class="main-nav__toggle" type="button" aria-label="Открыть меню"></button>
-      <ul class="main-nav__list">
+    <nav class="main-nav header__nav">
+      <button class="main-nav__toggle header__toggle" type="button" aria-label="Открыть меню"></button>
+      <ul class="main-nav__list header__nav-list">
         <li class="main-nav__item">
           <a class="main-nav__link" href="#benefits">Преимущества</a>
         </li>
-        <li class="main-nav__item">
+        <li class="main-nav__item main-nav__item--destinations">
           <a class="main-nav__link" href="#destinations">Направления</a>
         </li>
         <li class="main-nav__item">
@@ -72,5 +44,6 @@
     </div>
   </div>
 </main>
+<script src="js/menu.js"></script>
 </body>
 </html>

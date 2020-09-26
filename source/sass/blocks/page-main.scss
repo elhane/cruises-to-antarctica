@@ -6,13 +6,14 @@
   min-height: 650px;
 
   color: $text-light;
+  background-color: #2f80ce;
   background-image: url("../img/page-main-bg-desktop@1x.jpg");
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 
   @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
     background-image: url("../img/page-main-bg-desktop@2x.jpg");
-    // background-size: 1366px auto;
   }
 }
 
@@ -40,6 +41,10 @@
   .page-main__promo {
     min-height: 638px;
     background-image: url("../img/page-main-bg-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/page-main-bg-tablet@2x.jpg");
+    }
   }
 
   .page-main__promo h1 {
