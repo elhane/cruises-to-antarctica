@@ -11,6 +11,7 @@
 
   @include text(16px, 20px);
   @include list-reset;
+  font-weight: 500;
 }
 
 .main-nav__link {
