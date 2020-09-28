@@ -4,8 +4,9 @@
   margin: 0 auto;
 
   @media (max-width: $tablet-width) {
-    max-width: $tablet-container-width; //678px
-    padding: 0;
+    // max-width: $tablet-container-width; //678px //? убрать
+    // padding: 0;
+    padding: 0 45px; //? добавить
   }
 
   @media (max-width: $mobile-width) {

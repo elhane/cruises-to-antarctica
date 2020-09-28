@@ -1,0 +1,150 @@
+.benefits {
+  padding-top: 86px;
+  padding-bottom: 120px;
+  background-image: url("../img/benefits-bg-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+    background-image: url("../img/benefits-bg-desktop@2x.jpg");
+  }
+}
+
+.benefits h2 {
+  margin-bottom: 50px;
+
+  @include text(28px, 42px);
+  font-weight: 600;
+  text-align: center;
+}
+
+.benefits h3 {
+  margin-top: 15px;
+  margin-bottom: 9px;
+
+  @include text(18px, 25px);
+  font-weight: 500;
+}
+
+.benefits p {
+  margin-top: 0;
+
+  @include text(14px, 20px);
+  font-weight: 400;
+}
+
+.benefits__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  @include list-reset;
+}
+
+.benefits__item {
+  position: relative;
+  width: 31%;
+  padding: 67px 30px 11px;
+  background-color: $text-light;
+}
+
+.benefits__item svg {
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+
+.benefits__item--all-inclusive svg {
+  top: 35px;
+}
+
+.benefits__item--zodiac svg {
+  top: 38px;
+}
+
+.benefits__item--all-inclusive p {
+  padding-right: 15px;
+}
+
+.benefits__item--zodiac p {
+  padding-right: 51px;
+}
+
+
+@media (max-width: $tablet-width) {
+  .benefits {
+    padding-top: 67px;
+    padding-bottom: 100px;
+
+    background-image: url("../img/benefits-bg-tablet@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/benefits-bg-tablet@2x.jpg");
+    }
+  }
+
+  .benefits h2 {
+    @include text(26px, 39px);
+  }
+
+  .benefits h3 {
+    line-height: 25px;
+  }
+
+  .benefits__item {
+    padding: 55px 11px 6px 20px;
+  }
+
+  .benefits__item--liner svg {
+    top: 24px;
+    left: 21px;
+    width: 21px;
+    height: 26px;
+  }
+
+  .benefits__item--all-inclusive svg {
+    top: 28px;
+    left: 22px;
+    width: 33px;
+    height: 19px;
+  }
+
+  .benefits__item--zodiac svg {
+    top: 31px;
+    left: 23px;
+    width: 38px;
+    height: 13px;
+  }
+
+  .benefits__item--zodiac p {
+    padding-right: 13px;
+  }
+}
+
+@media (max-width: $mobile-width) {
+  .benefits {
+    padding-top: 36px;
+    padding-bottom: 36px;
+  }
+
+  .benefits__list {
+    flex-direction: column;
+  }
+
+  .benefits__item {
+    width: 100%;
+    margin-bottom: 30px;
+    padding-right: 22px;
+  }
+
+  .benefits h2 {
+    margin-bottom: 31px;
+
+    @include text(24px, 36px);
+  }
+
+  .benefits h3 {
+    max-width: 170px;
+  }
+}
