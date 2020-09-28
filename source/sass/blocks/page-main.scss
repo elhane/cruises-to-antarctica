@@ -1,5 +1,5 @@
 .page-main {
-  margin-top: -109px;
+  margin-top: -110px;
 }
 
 .page-main__promo {
@@ -35,7 +35,7 @@
 
 @media (max-width: $tablet-width) {
   .page-main {
-    margin-top: -83px;
+    margin-top: -80px;
   }
 
   .page-main__promo {
@@ -81,4 +81,3 @@
     @include text(16px, 22px);
   }
 }
-

@@ -6,7 +6,6 @@
   var headerToggle = document.querySelector('.header__toggle');
 
   header.classList.remove('header--nojs');
-  logo.classList.remove('header__logo-svg--menu-opened');
 
   headerToggle.addEventListener('click', function () {
     if (header.classList.contains('header--closed')) {
