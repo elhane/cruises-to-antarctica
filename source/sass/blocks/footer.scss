@@ -33,10 +33,10 @@
     outline: dashed 2px rgba(255, 255, 255, 0.2);
     outline-offset: 0;
   }
+}
 
-  &:active {
-    opacity: 0.3;
-  }
+.footer__logo-link:active .footer__logo-svg {
+  fill: darken($color-accent, 15%);
 }
 
 .footer__logo-svg {
@@ -77,7 +77,7 @@
   }
 
   &:active {
-    opacity: 0.5;
+    color: darken($color-accent, 15%);
   }
 }
 
@@ -107,11 +107,12 @@
     outline: dashed 2px rgba(255, 255, 255, 0.2);
     outline-offset: 3px;
   }
-
-  &:active {
-    opacity: 0.3;
-  }
 }
+
+.footer__social-link:active .footer__social-svg {
+  fill: darken($color-accent, 15%);
+}
+
 
 @media (max-width: $tablet-width) {
   .footer__logo-svg {
