@@ -96,6 +96,11 @@
     background-color: $color-accent;
   }
 
+  &:focus {
+    outline: dashed 2px rgba(255, 255, 255, 0.4);
+    outline-offset: 2px;
+  }
+
   &:active {
     color: $text-light;
     background-color: darken($color-accent, 15%);

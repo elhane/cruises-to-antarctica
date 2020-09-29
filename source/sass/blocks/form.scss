@@ -1,0 +1,170 @@
+.form h3 {
+  margin: 0 0 27px;
+
+  @include text(18px, 27px);
+  font-weight: 500;
+  color: $text-light;
+}
+
+.form button {
+  display: block;
+  width: 303px;
+  min-height: 43px;
+  padding: 10px 25px;
+
+  @include text(14px, 21px);
+  font-weight: 600;
+  border: none;
+  background-color: $text-light;
+
+  &:hover {
+    color: $text-dark;
+    background-color: $color-accent;
+  }
+
+  &:focus {
+    outline: dashed 2px rgba(255, 255, 255, 0.4);
+    outline-offset: 2px;
+  }
+
+  &:active {
+    color: $text-light;
+    background-color: darken($color-accent, 15%);
+  }
+}
+
+.form__field {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+
+  &--checkbox {
+    margin-bottom: 27px;
+  }
+}
+
+.form__field label {
+  color: $text-light;
+
+  @include text(10px, 13px);
+}
+
+.form__field--text input {
+  padding: 16px;
+  width: 303px;
+  height: 43px;
+
+  @include text(14px, 21px);
+  color: $text-dark;
+  border: none;
+  background-color: $text-light;
+
+  &:focus {
+    outline: dashed 2px rgba(255, 255, 255, 0.4);
+    outline-offset: 2px;
+  }
+}
+
+.form__field--text input::placeholder {
+  color: $text-dark;
+}
+
+.form__field--checkbox input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.form__field--checkbox label {
+  position: relative;
+  padding: 4px 0 4px 24px;
+
+  &::before {
+    @include pseudo;
+    left: 0;
+    top: 0;
+
+    width: 18px;
+    height: 18px;
+    background-color: $text-light;
+  }
+
+  &::after {
+    @include pseudo($display: none);
+    left: 4px;
+    top: 3px;
+
+    width: 10px;
+    height: 7px;
+    border: 1px solid $text-dark;
+    border-top-style: none;
+    border-right-style: none;
+    transform: rotate(-45deg);
+  }
+}
+
+.form__field--checkbox input:checked + label::after {
+  display: block;
+}
+
+.form__field--checkbox input:disabled + label {
+  opacity: 0.3;
+}
+
+.form__field--checkbox input:focus + label::before {
+  outline: dashed 2px rgba(255, 255, 255, 0.4);
+  outline-offset: 2px;
+}
+
+@media (max-width: $mobile-width) {
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: flex-start;
+    min-height: 380px;
+  }
+
+  .form button {
+    width: 100%;
+    margin-top: auto;
+  }
+
+  .form h3 {
+    min-height: 50px;
+    text-align: center;
+
+    @include text(18px, 25px);
+  }
+
+  .form__field label {
+    @include text(10px, 12px);
+  }
+
+  .form__field--text input {
+    width: 100%;
+  }
+
+  .form__field--checkbox label {
+    padding: 0 0 0 28px;
+    max-width: 173px;
+
+    &::before {
+      width: 20px;
+      height: 20px;
+    }
+
+    &::after {
+      @include pseudo($display: none);
+      left: 5px;
+      top: 4px;
+    }
+  }
+}

@@ -415,6 +415,42 @@
 
       </ul>
     </section>
+
+    <section class="booking">
+      <div class="booking__inner-wrapper container">
+        <div class="booking__info">
+          <h2>Раннее бронирование</h2>
+          <p>Забронируйте тур за&#160;3&#8209;6&#160;месяцев до&#160;даты&#160;выезда и&#160;сэкономьте&#160;до&#160;50%</p>
+        </div>
+        <div class="booking__form-wrapper">
+          <form class="form" action="https://echo.htmlacademy.ru" method="post">
+            <h3>Оставьте заявку и&#160;мы&#160;свяжемся с вами в ближайшее время</h3>
+
+            <div class="form__field form__field--text">
+              <input type="text" name="user-name" id="user-name" placeholder="Валерия" required>
+              <label class="visually-hidden" for="user-name">Имя</label>
+            </div>
+
+            <div class="form__field form__field--text">
+              <input type="tel" name="user-phone" id="user-phone" placeholder="89236889975" pattern="^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{10}$" required>
+              <label class="visually-hidden" for="user-phone">Номер телефона</label>
+            </div>
+
+            <div class="form__field form__field--text">
+              <input type="email" name="user-email" id="user-email" placeholder="grishaewa.lera@gmail.com" required>
+              <label class="visually-hidden" for="user-email">Электронная почта</label>
+            </div>
+
+            <div class="form__field form__field--checkbox">
+              <input type="checkbox" name="user-agree" id="user-agree" checked required>
+              <label for="user-agree">Я согласен на обработку моих&#160;персональных&#160;данных</label>
+            </div>
+
+            <button type="submit">Оставить заявку</button>
+          </form>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="footer">
