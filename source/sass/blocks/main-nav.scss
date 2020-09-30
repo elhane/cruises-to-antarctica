@@ -14,8 +14,11 @@
   font-weight: 500;
 }
 
+.main-nav__item {
+  padding: 7px 0 7px 34px;
+}
+
 .main-nav__link {
-  padding: 10px 0 20px 36px;
   text-align: right;
   transition: 0.3s;
 
@@ -26,7 +29,7 @@
 
   &:focus {
     outline: dashed 2px rgba(255, 255, 255, 0.2);
-    outline-offset: 0;
+    outline-offset: 3px;
   }
 
   &:active {
@@ -39,8 +42,11 @@
     @include text(14px, 17px);
   }
 
+  .main-nav__item {
+    padding-left: 24px;
+  }
+
   .main-nav__link {
-    padding-left: 26px;
     text-align: right;
   }
 }
@@ -71,13 +77,10 @@
   }
 
   .main-nav__item {
+    padding: 11px 0 10px;
+
     &--destinations {
       order: -1;
     }
-  }
-
-  .main-nav__link {
-    display: block;
-    padding: 11px 0 10px;
   }
 }

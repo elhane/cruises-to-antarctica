@@ -19,9 +19,7 @@
   position: relative;
 
   &::before {
-    content: "";
-    display: block;
-    position: absolute;
+    @include pseudo;
     top: 0;
     right: 0;
     bottom: 0;
@@ -31,7 +29,7 @@
 
   &:focus {
     outline: dashed 2px rgba(255, 255, 255, 0.2);
-    outline-offset: 0;
+    outline-offset: 3px;
   }
 }
 
@@ -47,6 +45,7 @@
 .footer__social {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   @include list-reset;
 }
@@ -57,6 +56,10 @@
   margin-left: 22px;
 }
 
+.footer__nav-item {
+  padding: 0 15px 0 18px;
+}
+
 .footer__social {
   align-items: center;
   width: 117px;
@@ -64,7 +67,6 @@
 }
 
 .footer__nav-link {
-  padding: 10px 17px;
   display: block;
 
   &:hover {
@@ -73,7 +75,7 @@
 
   &:focus {
     outline: dashed 2px rgba(255, 255, 255, 0.2);
-    outline-offset: 0;
+    outline-offset: 3px;
   }
 
   &:active {
@@ -93,9 +95,7 @@
   position: relative;
 
   &::before {
-    content: "";
-    display: block;
-    position: absolute;
+    @include pseudo;
     top: 0;
     right: 0;
     bottom: 0;
@@ -126,8 +126,8 @@
     @include text(12px, 15px);
   }
 
-  .footer__nav-link {
-    padding: 0 24px 0 0;
+  .footer__nav-item {
+    padding: 0 24px 4px 0;
   }
 
   .footer__social {
@@ -175,7 +175,7 @@
     margin-left: 0;
   }
 
-  .footer__nav-link {
-    padding: 8px 24px 9px 0;
+  .footer__nav-item {
+    padding: 5px 0 12px 0;
   }
 }
