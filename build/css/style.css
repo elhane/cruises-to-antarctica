@@ -1178,7 +1178,6 @@ img {
     .cruises__item--astoria {
       background-position: -144px 0; }
     .cruises__item--aline, .cruises__item--minion {
-      background-image: url(../img/minion-1@1x.jpg);
       background-position: -203px -43px;
       background-size: 206%; }
     .cruises__item--odysseus {
@@ -1321,6 +1320,7 @@ img {
     text-align: center; }
   .booking__info p {
     margin: 0 auto;
+    max-width: 279px;
     font-size: 16px;
     line-height: 22px; }
   .booking__form-wrapper {
@@ -1489,3 +1489,114 @@ img {
       position: absolute;
       left: 5px;
       top: 4px; } }
+
+.contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 121px;
+  padding-bottom: 121px; }
+
+.contacts__map-wrapper {
+  width: 560px;
+  height: 306px;
+  background-image: url("../img/map-desktop@1x.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+  @media (-webkit-min-device-pixel-ratio: 1.5), (min-resolution: 144dpi), (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx) {
+    .contacts__map-wrapper {
+      background-image: url("../img/map-desktop@2x.jpg"); } }
+
+.contacts__map-wrapper iframe {
+  height: 100%;
+  width: 100%;
+  border: 0; }
+
+.contacts__info {
+  width: 50%;
+  padding: 40px 0 36px 80px; }
+
+.contacts__info h3 {
+  margin-top: 4px;
+  font-size: 18px;
+  line-height: 27px;
+  font-weight: 500; }
+
+.contacts__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400; }
+
+.contacts__list-item {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 14px 0 7px 28px; }
+
+.contacts__list-item p {
+  margin: 0; }
+
+.contacts__list-svg {
+  position: absolute;
+  top: 15px;
+  left: 0; }
+
+@media (max-width: 1023px) {
+  .contacts {
+    padding-top: 100px;
+    padding-bottom: 100px; }
+  .contacts__map-wrapper {
+    width: 48%;
+    height: 335px;
+    background-image: url("../img/map-tablet@1x.jpg"); } }
+  @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 1023px) and (min-resolution: 144dpi), (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (min-resolution: 2dppx) {
+    .contacts__map-wrapper {
+      background-image: url("../img/map-tablet@2x.jpg"); } }
+
+@media (max-width: 1023px) {
+  .contacts__info {
+    padding: 32px 0 30px 14px; }
+  .contacts__info h3 {
+    margin-bottom: 13px; }
+  .contacts__list-svg {
+    position: absolute;
+    top: 17px;
+    left: 0; } }
+
+@media (max-width: 767px) {
+  .contacts {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    padding-top: 54px;
+    padding-bottom: 65px; }
+  .contacts__map-wrapper {
+    width: 100%;
+    height: 316px;
+    background-image: url("../img/map-mobile@1x.jpg"); } }
+  @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 1.5), (max-width: 767px) and (min-resolution: 144dpi), (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (min-resolution: 2dppx) {
+    .contacts__map-wrapper {
+      background-image: url("../img/map-mobile@2x.jpg"); } }
+
+@media (max-width: 767px) {
+  .contacts__info {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 28px; }
+  .contacts__info h3 {
+    max-width: 450px; } }

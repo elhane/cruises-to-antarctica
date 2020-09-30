@@ -107,6 +107,7 @@
 
   .booking__info p {
     margin: 0 auto;
+    max-width: 279px;
 
     @include text(16px, 22px);
   }
