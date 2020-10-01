@@ -87,29 +87,53 @@
 
   .header__toggle {
     position: absolute;
-    top: 25px;
+    top: 30px;
     right: 15px;
 
     display: block;
     width: 24px;
-    height: 14px;
-    background-image: url("../img/svg/burger.svg");
-    background-color: transparent;
-    background-repeat: no-repeat;
-    background-position: center;
+    height: 2px;
+    padding: 0;
+    background-color: $text-light;
     border: none;
+    outline: none;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      @include pseudo;
+      width: 24px;
+      height: 2px;
+      right: 0;
+      background-color: $text-light;
+    }
+
+    &::before {
+      top: -6px;
+    }
+
+    &::after {
+      top: 6px;
+    }
   }
 
   .header--opened .header__toggle {
-    position: absolute;
-    top: 25px;
-    right: 15px;
-    width: 13px;
-    height: 13px;
-    padding: 0;
+    right: 12px;
     z-index: 5;
+    width: 19px;
+    background-color: $text-dark;
+    transform: rotate(45deg);
 
-    background-image: url("../img/svg/cross.svg");
+    &::before {
+      top: 0;
+      width: 19px;
+      background-color: $text-dark;
+      transform: rotate(90deg);
+    }
+
+    &::after {
+      display: none;
+    }
   }
 
   .header--nojs .header__toggle {
