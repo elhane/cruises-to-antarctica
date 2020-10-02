@@ -55,8 +55,25 @@
   display: flex;
   align-items: center;
   padding: 14px 0 7px 28px;
-}
 
+  &::before {
+    @include pseudo;
+    top: 15px;
+    left: 0;
+    width: 18px;
+    height: 18px;
+    background-repeat: no-repeat;
+  }
+
+  &--address::before {
+    height: 22px;
+    background-image: url("../img/svg/mark.svg");
+  }
+
+  &--phone::before {
+    background-image: url("../img/svg/phone.svg");
+  }
+}
 
 .contacts__list-item a {
   &:hover {
@@ -78,12 +95,6 @@
   font-style: normal;
 }
 
-.contacts__list-svg {
-  position: absolute;
-  top: 15px;
-  left: 0;
-}
-
 @media (max-width: $tablet-width) {
   .contacts {
     padding-top: 100px;
@@ -103,10 +114,10 @@
     margin-bottom: 13px;
   }
 
-  .contacts__list-svg {
-    position: absolute;
-    top: 17px;
-    left: 0;
+  .contacts__list-item {
+    &--address::before {
+      top: 19px;
+    }
   }
 }
 
