@@ -16,6 +16,7 @@
   font-weight: 600;
   border: none;
   background-color: $text-light;
+  cursor: pointer;
 
   &:hover {
     color: $text-dark;
@@ -45,6 +46,7 @@
 
 .form__field label {
   color: $text-light;
+  cursor: pointer;
 
   @include text(10px, 13px);
 }
@@ -57,6 +59,7 @@
   @include text(14px, 21px);
   color: $text-dark;
   border: none;
+  border-radius: 0;
   background-color: $text-light;
 
   &:hover {

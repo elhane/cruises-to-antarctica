@@ -36,6 +36,11 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  &:focus {
+    outline: dashed 2px rgba(118, 191, 241, 0.4);
+    outline-offset: 4px;
+  }
+
   &--astoria {
     background-image: url("../img/astoria@1x.jpg");
     background-position: -166px 0;
@@ -177,6 +182,10 @@
 }
 
 .cruises__item:hover .cruises__info {
+  display: flex;
+}
+
+.cruises__item:active .cruises__info {
   display: flex;
 }
 
