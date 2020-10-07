@@ -4,6 +4,7 @@
   var logo = document.querySelector('.header__logo-svg');
   var header = document.querySelector('.header');
   var headerToggle = document.querySelector('.header__toggle');
+  var cards = document.querySelectorAll('.cruises__item');
 
   header.classList.remove('header--nojs');
 
@@ -18,4 +19,22 @@
       logo.classList.remove('header__logo-svg--opened');
     }
   });
+
+  // фокус на кнопку забронировать
+  cards.forEach(function (item) {
+    item.addEventListener('focus', function () {
+      closeCards();
+      item.classList.add('cruises__item--focused');
+      item.querySelector('.cruises__button').focus();
+    });
+  });
+
+  function closeCards() {
+    cards.forEach(function (item) {
+      if (item.classList.contains('cruises__item--focused')) {
+        item.classList.remove('cruises__item--focused');
+      }
+    });
+  }
+
 })();

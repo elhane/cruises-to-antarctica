@@ -71,3 +71,14 @@
     @include text(16px, 22px);
   }
 }
+
+
+@media (max-width: 320px) {
+  .page-main__promo {
+    background-image: url("../img/page-main-bg-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/page-main-bg-mobile@2x.jpg");
+    }
+  }
+}
